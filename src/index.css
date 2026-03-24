@@ -8,16 +8,27 @@
 
   --color-ink: #000000;
   --color-paper: #f5f0eb;
+  --color-accent: #c4a47c;
+  --color-accent-light: #d4b88c;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-ink text-paper selection:bg-paper selection:text-ink;
+    @apply bg-ink text-paper selection:bg-accent selection:text-ink;
     font-family: var(--font-sans);
+    cursor: none;
   }
 
   h1, h2, h3 {
     @apply font-display uppercase tracking-tighter;
+  }
+
+  a, button {
+    cursor: none;
   }
 }
 
@@ -41,27 +52,30 @@
   scrollbar-width: none;
 }
 
-/* Custom cursor */
-.custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border: 1.5px solid rgba(245, 240, 235, 0.6);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
+/* Slow dolly animation for hero */
+@keyframes slowDolly {
+  0% { transform: scale(1.1) translateX(0); }
+  50% { transform: scale(1.1) translateX(-3%); }
+  100% { transform: scale(1.1) translateX(0); }
 }
 
-.custom-cursor.hovering {
-  transform: translate(-50%, -50%) scale(2.5);
-  background: rgba(245, 240, 235, 0.1);
+.animate-dolly {
+  animation: slowDolly 20s ease-in-out infinite;
+}
+
+/* Ken Burns zoom */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 10s ease-in-out infinite;
 }
 
 @media (pointer: coarse) {
-  .custom-cursor {
-    display: none;
+  body, a, button {
+    cursor: auto;
   }
 }
