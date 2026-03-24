@@ -39,7 +39,7 @@ export default function Hero() {
     >
       <motion.div style={{ scale, opacity }} className="absolute inset-0 z-0">
         <motion.img
-          src="https://images.unsplash.com/photo-1505118380757-91f5816fff30?auto=format&fit=crop&q=80&w=2000"
+          src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&q=80&w=2000"
           alt="Norfolk Coast"
           className="w-full h-full object-cover grayscale brightness-40"
           referrerPolicy="no-referrer"
@@ -59,7 +59,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <span className="inline-block mb-4 px-4 py-1 border border-paper/30 rounded-full text-[10px] uppercase tracking-[0.3em] font-mono">
-            Norfolk, UK • Creative Media
+            Hamilton, ON • Creative Media
           </span>
           <motion.h1
             style={{ y }}

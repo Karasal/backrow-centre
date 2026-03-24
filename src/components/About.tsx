@@ -5,7 +5,7 @@ import { Aperture, Sparkles } from 'lucide-react';
 const STATS = [
   { value: '20+', label: 'Projects Completed' },
   { value: '5', label: 'Brand Partners' },
-  { value: 'Norfolk', label: '& Beyond' },
+  { value: 'Hamilton', label: '& Beyond' },
   { value: '2022', label: 'Established' },
 ];
 
@@ -73,8 +73,8 @@ export default function About() {
               Beyond the<br />Front Row
             </h2>
             <p className="text-xl leading-relaxed mb-6 font-light">
-              BackRowCentre Media is the creative practice of Nathan McCrory. Based in Norfolk,
-              I specialise in video production, photography, and visual content that helps brands
+              BackRowCentre Media is the creative practice of Nathan McCrory. Based in Hamilton, Ontario,
+              I specialize in video production, photography, and visual content that helps brands
               and artists tell their story.
             </p>
             <p className="text-lg leading-relaxed mb-12 font-light text-ink/60">
